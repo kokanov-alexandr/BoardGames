@@ -16,6 +16,7 @@ function PrintGames($games) {
                 <?php
             }
             ?>
+
             <a class="btn btn-dark" role="button" href=../pages/game.php?game=<?=$game[0]?>>Подробнее</a>
         </form>
     <?php }

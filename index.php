@@ -13,16 +13,8 @@
         if (isset($_GET['page'])) {
             $page_number = $_GET['page'];
         }
-        $games = mysqli_fetch_all(mysqli_query($connect,  "SELECT * FROM `all_games`"));
-        $game_for_page = [];
-        $n = 2;
-        for ($i = $n * ($page_number - 1); $i < $n * $page_number; $i++) {
-            $game_for_page[] = $games[$i];
-        }
-        PrintGames($game_for_page);
+        $games = mysqli_fetch_all(mysqli_query($connect,  "SELECT * FROM `games`"));
+        PrintGames($games);
     ?>
-    <form action="scripts/increase_page.php" method="post">
-        <button class="btn btn-outline-dark">Следующая страница</button>
-    </form>
 </body>
 </html>

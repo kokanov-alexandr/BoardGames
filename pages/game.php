@@ -4,7 +4,7 @@
     require_once "../components/header.php";
 
     $game_name = $_GET["game"];
-    $game  = mysqli_fetch_all(mysqli_query($connect,  "SELECT * FROM `all_games` WHERE `all_games`.`id` = $game_name"))[0];
+    $game  = mysqli_fetch_all(mysqli_query($connect,  "SELECT * FROM `games` WHERE `games`.`id` = $game_name"))[0];
     ?>
     <h3 class=""><?=$game[1]?></h3>
     <img style="height: 300px" src="<?=$game[2]?>">
